@@ -14,6 +14,7 @@ class App extends React.Component{
                         <Route exact path='/' component={Home}/>
                         <Route exact path='/texts' component={Texts}/>
                         <Route exact path='/words' component={Words}/>
+                        {/* <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> */}
                     </div>
                 </AppShell>
             </Router>

@@ -25,7 +25,6 @@ class AppShell extends React.Component{
         };
     }
     handlerDrawerToggle = () => this.setState({toggle: !this.state.toggle})
-    handlerCloseDrawerToggle = (bToggle) => this.setState({toggle: bToggle})
 
     render(){
         const {classes } = this.props;
@@ -37,8 +36,9 @@ class AppShell extends React.Component{
                             <ManuIcon/>
                         </IconButton>
                     </AppBar>
-                    <Drawer open={this.state.toggle}> 
-                        <MenuItem onClick={this.handlerDrawerToggle}>
+                    
+                    <Drawer open={this.state.toggle} onEscapeKeyDown={this.handlerDrawerToggle} onBackdropClick={this.handlerDrawerToggle}> 
+                        {/* <MenuItem onClick={this.handlerDrawerToggle}>
                             <Link component={RouterLink} to="/">Home</Link>
                         </MenuItem>
                         <MenuItem onClick={this.handlerDrawerToggle}>
@@ -46,7 +46,7 @@ class AppShell extends React.Component{
                         </MenuItem>
                         <MenuItem onClick={this.handlerDrawerToggle}>
                             <Link component={RouterLink} to="/words">Words</Link>
-                        </MenuItem>
+                        </MenuItem> */}
                     </Drawer>
                 </div>
                 <div id="content" style={{margin: 'auto', marginTop: '20px'}}>
